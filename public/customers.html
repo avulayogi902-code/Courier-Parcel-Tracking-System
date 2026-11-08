@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - YOGI Courier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">📦 YOGI COURIER</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="customers.html">Customers</a>
+            <a href="parcels.html">Parcels</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1>Customer Management</h1>
+        <p>Register and manage courier customers.</p>
+
+        <form id="customerForm">
+            <input type="hidden" id="customer_id">
+
+            <label>Customer Name</label>
+            <input type="text" id="name" placeholder="Enter customer name" required>
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter email">
+
+            <label>Address</label>
+            <textarea id="address" placeholder="Enter customer address"></textarea>
+
+            <button type="submit">Save Customer</button>
+        </form>
+
+        <h2>Customer Details</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTable">
+                    <tr>
+                        <td colspan="5">Customer details will appear here.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```

@@ -1,0 +1,91 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Management - YOGI Courier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">📦 YOGI COURIER</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="customers.html">Customers</a>
+            <a href="parcels.html">Parcels</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1>Parcel Management</h1>
+        <p>Book and manage your courier parcels.</p>
+
+        <form id="parcelForm">
+            <input type="hidden" id="parcel_id">
+
+            <label>Customer ID</label>
+            <input type="number" id="customer_id" placeholder="Enter customer ID" required>
+
+            <label>Sender Address</label>
+            <textarea id="sender_address" placeholder="Enter sender address" required></textarea>
+
+            <label>Receiver Name</label>
+            <input type="text" id="receiver_name" placeholder="Enter receiver name" required>
+
+            <label>Receiver Phone</label>
+            <input type="text" id="receiver_phone" placeholder="Enter receiver phone" required>
+
+            <label>Receiver Address</label>
+            <textarea id="receiver_address" placeholder="Enter receiver address" required></textarea>
+
+            <label>Parcel Weight (KG)</label>
+            <input type="number" id="weight" step="0.01" min="0.01" placeholder="Enter parcel weight" required>
+
+            <label>Booking Date</label>
+            <input type="date" id="booking_date" required>
+
+            <label>Parcel Status</label>
+            <select id="status" required>
+                <option value="">Select Status</option>
+                <option value="Booked">Booked</option>
+                <option value="Dispatched">Dispatched</option>
+                <option value="In Transit">In Transit</option>
+                <option value="Delivered">Delivered</option>
+            </select>
+
+            <button type="submit">Save Parcel</button>
+        </form>
+
+        <h2>Parcel Details</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parcel ID</th>
+                        <th>Customer ID</th>
+                        <th>Receiver</th>
+                        <th>Phone</th>
+                        <th>Weight</th>
+                        <th>Booking Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="parcelTable">
+                    <tr>
+                        <td colspan="8">Parcel details will appear here.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
